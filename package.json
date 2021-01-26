@@ -1,0 +1,13 @@
+{
+  "name": "server-names",
+  "version": "1.0.0",
+  "description": "Get Random server-names ... based on north mythology and star-gate",
+  "main": "src/index.js",
+  "repository": "git@github.com:renemeye/server-names.git",
+  "author": "René Meye <rene.meye@vesputi.com> (https://themobilitybox.com/)",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "unique-random-array": "2.0.0"
+  }
+}
