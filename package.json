@@ -20,6 +20,11 @@
   "scripts": {
     "test": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
