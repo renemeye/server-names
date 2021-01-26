@@ -10,7 +10,7 @@ jobs:
           command: npm install
       - run:
           name: test
-          command: npm run test
+          command: npm run test:once
       - run:
           name: release
           command: npm run semantic-release || true
