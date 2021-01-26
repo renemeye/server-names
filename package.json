@@ -1,6 +1,6 @@
 {
   "name": "server-names",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get Random server-names ... based on north mythology and star-gate",
   "main": "src/index.js",
   "repository": "git@github.com:renemeye/server-names.git",
