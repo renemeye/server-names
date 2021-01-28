@@ -14,6 +14,7 @@
     "chai": "4.2.0",
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
+    "ghooks": "2.0.4",
     "mocha": "8.2.1",
     "semantic-release": "^17.3.7"
   },
@@ -26,9 +27,14 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
-    }
+    },
+		"ghooks": {
+			"pre-commit": "npm run test:once"
+		}
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   }
 }
