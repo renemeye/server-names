@@ -21,9 +21,12 @@
     "ghooks": "2.0.4",
     "istanbul": "0.4.5",
     "mocha": "8.2.1",
+    "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
     "rimraf": "3.0.2",
-    "semantic-release": "^17.3.7"
+    "semantic-release": "^17.3.7",
+    "webpack": "5.18.0",
+    "webpack-cli": "4.4.0"
   },
   "scripts": {
     "watch:test": "npm test -- --watch --watch-extensions",
@@ -33,7 +36,10 @@
     "report-coverage": "cat coverage/lcov.info | codecov",
     "semantic-release": "semantic-release",
     "prebuild": "rimraf dist",
-    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "build:umd": "webpack --output-filename index.umd.js --mode development",
+    "build:umd.min": "webpack --output-filename index.umd.min.js --mode production",
     "commit": "cz"
   },
   "files": [
@@ -54,6 +60,9 @@
     ]
   },
   "babel": {
-    "presets": ["es2015", "stage-2"]
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   }
 }
