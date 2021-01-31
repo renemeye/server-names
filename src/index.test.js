@@ -1,5 +1,5 @@
-const {expect} = require('chai');
-const server_names = require('./index');
+import {expect} from 'chai';
+import server_names from './index';
 
 describe('server-names', function(){
   describe('all API', function(){
