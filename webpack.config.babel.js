@@ -5,7 +5,8 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'server_names'
+    library: 'ServerNames',
+    libraryExport: 'default'
   },
   devtool: 'source-map',
 }
